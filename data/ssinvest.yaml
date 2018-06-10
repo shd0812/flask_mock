@@ -1,0 +1,43 @@
+testinfo:
+    - id: test001
+      title: 投资
+      url: https://www.shaxiaoseng.com/Product/index.html
+      info: 打开testerhome
+testcase:
+    - deal_no: QY18050513784
+      operte_type: pick_dealNo
+      info: 散标编号
+    - element_info: xpath=>//*[@id="form"]/input[2]
+      operte_type: input
+      msg: 100
+      info: 输入投资金额
+    - element_info: class=>btn-j
+      operte_type: click
+      info: 立即加入
+    - element_info: id=>tel
+      operte_type: input
+      msg: 13511111105
+      info: 输入用户名
+    - element_info: id=>password
+      operte_type: input
+      msg: 111111
+      info: 输入密码
+    - element_info: id=>login
+      operte_type: click
+      info: 点击登录
+    - element_info: xpath=>//*[@id="form"]/input[2]
+      operte_type: input
+      msg: 100
+      info: 输入投资金额
+    - element_info: class=>btn-j
+      operte_type: click
+      info: 立即加入
+    - element_info: id=>buy-btn
+      operte_type: open_new_window
+      info: 确认支付
+check:
+    - check_element: //ul[@class='dropdown-menu']/li/a[contains(text(),'lose')]
+      check_title: 登录1
+      find_type: xpath
+      check: default_check(默认可以不传，就是简单的查找页面元素)
+      info: 查找用户名成功
