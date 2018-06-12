@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>星火智投</title>
+	<style>
+body{background-color:#b0c4de;}
+div{
+	top:50%;
+	text-align: center;
+}
+	</style>
+	<script src="../static/jquery.min.js"></script>
+	<script>
+
+$(document).ready(function() {
+$(".btn10").click(function(){
+    //alert('222')
+    var data = $("#addForm").serialize();
+    //alert(data)
+    var url = $("#addForm").attr("action");
+    //alert(url)
+   $.ajax({
+        type: 'POST',
+        url: url,
+       dataType: 'json',
+        data: data,
+        success: function (data) {
+           //alert(data)
+			//var jsonStr = JSON.stringify(data, null, rep);
+			alert(data)
+            $('#json').html(data);
+        }
+     });
+});
+});
+</script>
+
+</head>
+
+<body >
+<div>
+	<form target="_blank" id="addForm" action="/home/next" method="post">
+		<select name="parm_url">register
+			<option value="register_query">1.注册绑定查询</option>
+            <option value="register">2.新用户注册</option>
+			<option value="query_userbidinfo">5.用户投资记录查询接口</option>
+			<option value="query_userbidrepayinfo">6.用户所持标的回款信息查询接口</option>
+			<option value="query_useraccount">7.账户信息查询接口</option>
+			<option value="query_bondinfo">8.对接平台标的列表查询接口</option>
+			<option value="query_userbiditransfer">9.用户债转记录查询接口</option>
+		</select>
+		<p><textarea name="parm_str" rows="10" cols="100"></textarea></p>
+		      <p style="color:red">* c_code、t_code、serial_num、sign不用填写</p>
+              <p style="color:red">* 如需加密则在参数值后加 "_m"</p>
+              <span style="color:red">例:新用户注册:   mobile=18513070001_m&user_id=xeenhuo003_m&user_name=wanghou_m&user_identity=152701198001010039_m
+                  <br>用户投资记录查询:  platform_uid=293_m&start_time=2018-05-12 12:34:34&end_time=2018-05-12 12:34:34</span>
+
+			  </form>
+	<p><button class="btn10" type="submit">来呀，快活呀</button></p>
+
+
+</div>
+<hr>
+<div id="json" style="text-align:left">
+</div>
+</body>
+</html>
