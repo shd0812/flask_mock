@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隐藏和展示</title>
+    <script src="../static/jquery.min.js"></script>
+    <script>
+ function gradeChange(){
+      b=$('#name option:selected').val();
+      if (b=='qi')
+            var ui =document.getElementById("put");
+            ui.style.display="";
+   alert(b)
+       }
+        $(document).ready(function() {
+          // k= $('#name option:selected').text();//选中的文本
+
+            b=$('#name option:selected').val();//选中的值
+
+            //s=$("#name ").get(0).selectedIndex;//索引
+            alert(b);
+           // alert(b);
+            //alert(s)
+        });
+    </script>
+</head>
+<body>
+<select id="name" onchange="gradeChange()">
+    <option value="qi">企业</option>
+    <option value="fang">房子</option>
+</select>
+<br>
+<input type="text" placeholder="haha"  id="put"  style="display:none"/>
+</body>
+</html>
