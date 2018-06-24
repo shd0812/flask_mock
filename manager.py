@@ -2,8 +2,8 @@ from flask import Flask,render_template
 
 app = Flask(__name__)
 app.secret_key = '123'
-from background.first import one
-app.register_blueprint(one,url_prefix='/home')
+from server.mock import home
+app.register_blueprint(home,url_prefix='/home')
 
 @app.errorhandler(404)
 def not_found(e):

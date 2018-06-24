@@ -1,6 +1,7 @@
 import json
 from flask import Flask
 from flask import request, make_response,jsonify
+from server.db import *
 app = Flask(__name__)
 users_dict = {}
 @app.route('/',methods=['GET','POST'])
@@ -8,22 +9,20 @@ def home():
     return 'Hello world!'
 @app.route('/api/users/<int:uid>', methods=['GET'])
 def get_user(uid):
-    print('看看%s' %uid)
-    user = users_dict.get(uid)
-    print(user,users_dict)
-    if user :
+    select_data = select_user(int(uid))
+
+    if select_data :
         success = True
         status_code = 200
-
-
     else:
         success = False
         status_code = 404
     result = {
         'success': success,
-        'data': user
+        'data': select_data
     }
-    response = make_response(json.dumps(result),status_code)
+    print(result)
+    response = make_response(jsonify(result),status_code)
     response.headers["Content-Type"] = "application/json"
     print('返回结果%s' %response.data)
     return response
@@ -31,22 +30,34 @@ def get_user(uid):
 @app.route('/api/users/<int:uid>', methods=['POST'])
 def create_user(uid):
     user = request.get_json()
-
-    print(user)
-    if uid not in users_dict:
-        result = {
-            'success': True,
-            'msg': "user created successfully."
-        }
-        status_code = 201
-        users_dict[uid] = user
+    select_data = select_user(int(uid))
+    #print(uid,select_data)
+    result={}
+    status_code=''
+    if  select_data=='':
+        try:
+            name = user['name']
+            mobile = user['mobile']
+            province=user['province']
+            insert_data = insert_user(uid,name,mobile,province)
+            result = {
+                'success': True,
+                'msg': "user created successfully."
+            }
+            status_code = 201
+            #users_dict[uid] = user
+            print(insert_data)
+        except:
+            print('参数错误')
     else:
         result = {
             'success': False,
             'msg': "user already existed."
         }
         status_code = 500
-    print(users_dict)
+        print('已有数据')
+
+    #print(result)
     response = make_response(json.dumps(result), status_code)
     print(response)
     response.headers["Content-Type"] = "application/json"

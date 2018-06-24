@@ -30,7 +30,14 @@ class hh_DB():
             return 'sql_error', e
         else:
             self.db.commit()
-            return self.cursor.fetchall()
+            data=self.cursor.fetchall()
+            print(data)
+            if str(data) == '()':
+                print('执行成功')
+                result=''
+            else:
+                result = data
+            return result
 
 if __name__=='__main__':
     db=hh_DB('sxs_vault','../data/config.ini')
