@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5686e03-0000-4b32-b2d2-a7a79a2c04e6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/base_Api.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/test_one.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/db.py" afterPath="$PROJECT_DIR$/server/db.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,10 +30,10 @@
     <SUITE FILE_PATH="coverage/Flask_mock$Unittest_TestServer_test_create_user_not_existed__1_.coverage" NAME="Unittest TestServer.test_create_user_not_existed (1) Coverage Results" MODIFIED="1529835074917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
     <SUITE FILE_PATH="coverage/Flask_mock$mock_test.coverage" NAME="mock_test Coverage Results" MODIFIED="1528809839555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/background" />
     <SUITE FILE_PATH="coverage/Flask_mock$Unittests_in_ApiServer_Unittest__2_.coverage" NAME="Unittests in ApiServer_Unittest (2) Coverage Results" MODIFIED="1529834479680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
-    <SUITE FILE_PATH="coverage/Flask_mock$db.coverage" NAME="db Coverage Results" MODIFIED="1529826799919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
     <SUITE FILE_PATH="coverage/Flask_mock$Unittests_in_TestServer__3_.coverage" NAME="Unittests in TestServer (3) Coverage Results" MODIFIED="1529834044606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
     <SUITE FILE_PATH="coverage/Flask_mock$test_one.coverage" NAME="test_one Coverage Results" MODIFIED="1529834920193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
     <SUITE FILE_PATH="coverage/Flask_mock$Unittest_TestServer_test_create_user_not_existed__2_.coverage" NAME="Unittest TestServer.test_create_user_not_existed (2) Coverage Results" MODIFIED="1529835092295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
+    <SUITE FILE_PATH="coverage/Flask_mock$db.coverage" NAME="db Coverage Results" MODIFIED="1529853475676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -85,8 +84,8 @@
       <file leaf-file-name="mock.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/mock.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="84" column="7" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="7" />
+            <state relative-caret-position="100">
+              <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -94,10 +93,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="logger.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Common/logger.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="base_Api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/base_Api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="285">
               <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
@@ -106,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_one.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_one.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/test_one.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+            <state relative-caret-position="425">
+              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="16" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -121,12 +130,13 @@
       <file leaf-file-name="db.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state relative-caret-position="350">
+              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding>
-                <marker date="1529826829295" expanded="true" signature="146:247" ph="INSERT INTO `mock_db`.`mock_user`... " />
-                <marker date="1529826829295" expanded="true" signature="392:427" ph="SELECT * FRO... mock_user" />
-                <marker date="1529826829295" expanded="true" signature="392:429" ph="SELECT * FRO... mock_user" />
+                <element signature="e#0#36#0" expanded="true" />
+                <marker date="1529853360383" expanded="true" signature="171:272" ph="INSERT INTO `mock_db`.`mock_user`... " />
+                <marker date="1529853360383" expanded="true" signature="417:452" ph="SELECT * FRO... mock_user" />
+                <marker date="1529853360383" expanded="true" signature="417:454" ph="SELECT * FRO... mock_user" />
               </folding>
             </state>
           </provider>
@@ -161,10 +171,11 @@
         <option value="$PROJECT_DIR$/server/db.sql" />
         <option value="$PROJECT_DIR$/Common/common_OpDB.py" />
         <option value="$PROJECT_DIR$/server/mock.py" />
-        <option value="$PROJECT_DIR$/server/db.py" />
         <option value="$PROJECT_DIR$/server/ApiServerUnittst.py" />
         <option value="$PROJECT_DIR$/server/base_Api.py" />
         <option value="$PROJECT_DIR$/server/test_one.py" />
+        <option value="$PROJECT_DIR$/server/db.py" />
+        <option value="$PROJECT_DIR$/Common/logger.py" />
       </list>
     </option>
   </component>
@@ -257,34 +268,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HttpRunner-master" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittest TestServer.test_create_user_not_existed (3)">
-    <configuration default="false" name="Unittest TestServer.test_create_user_not_existed" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Flask_mock" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server/test_one.py" />
-      <option name="CLASS_NAME" value="TestServer" />
-      <option name="METHOD_NAME" value="test_create_user_not_existed" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.db">
     <configuration default="false" name="test_one" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -370,6 +358,24 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="db" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Flask_mock" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server/db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -587,19 +593,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test_one" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed (2)" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed (3)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.test_one" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed (2)" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed (3)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.db" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed (3)" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test_one" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed" />
+        <item index="0" class="java.lang.String" itemvalue="Python.db" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed (3)" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestServer.test_create_user_not_existed (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test_one" />
       </list>
     </recent_temporary>
   </component>
@@ -649,7 +655,21 @@
       <option name="project" value="LOCAL" />
       <updated>1529805709467</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="学习mock api">
+      <created>1529835158586</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1529835158586</updated>
+    </task>
+    <task id="LOCAL-00007" summary="log 日志">
+      <created>1529852841024</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1529852841024</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -718,7 +738,8 @@
     <MESSAGE value="22" />
     <MESSAGE value="增加js的方法" />
     <MESSAGE value="学习mock api" />
-    <option name="LAST_COMMIT_MESSAGE" value="学习mock api" />
+    <MESSAGE value="log 日志" />
+    <option name="LAST_COMMIT_MESSAGE" value="log 日志" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -960,18 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <marker date="1529826829295" expanded="true" signature="146:247" ph="INSERT INTO `mock_db`.`mock_user`... " />
-            <marker date="1529826829295" expanded="true" signature="392:427" ph="SELECT * FRO... mock_user" />
-            <marker date="1529826829295" expanded="true" signature="392:429" ph="SELECT * FRO... mock_user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/ApiServerUnittst.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -982,8 +991,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/mock.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="84" column="7" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="7" />
+        <state relative-caret-position="100">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -992,7 +1001,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/base_Api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="285">
           <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
@@ -1002,11 +1011,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/test_one.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        <state relative-caret-position="425">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="16" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+            <marker date="1529853360383" expanded="true" signature="171:272" ph="INSERT INTO `mock_db`.`mock_user`... " />
+            <marker date="1529853360383" expanded="true" signature="417:452" ph="SELECT * FRO... mock_user" />
+            <marker date="1529853360383" expanded="true" signature="417:454" ph="SELECT * FRO... mock_user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
