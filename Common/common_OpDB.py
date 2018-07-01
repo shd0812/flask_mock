@@ -1,5 +1,9 @@
 import pymysql
 from Common.common_OpFile import operate_File
+from Common.common_Logger import *
+
+logger = myLog.getLog()
+
 class hh_DB():
 
     # print(host,type(port),user,passwd)
@@ -17,7 +21,8 @@ class hh_DB():
                                       , db=db_name, use_unicode=True, charset='utf8')
         except Exception as e:
             print(port)
-            print('mysql 连接失败')
+            logger.error('mysql 连接失败,端口号为{},错误信息为{}'.format(port,e))
+
         else:
             self.cursor = self.db.cursor(cursor=pymysql.cursors.DictCursor)  # 转化为字典
 
@@ -27,17 +32,11 @@ class hh_DB():
         except Exception as e:
             print('sql执行失败')
             print(sql)
+            logger.error('sql执行失败，sql为：{},错误信息为:{}'.format(sql,e))
             return 'sql_error', e
         else:
             self.db.commit()
-            data=self.cursor.fetchall()
-            print(data)
-            if str(data) == '()':
-                print('执行成功')
-                result=''
-            else:
-                result = data
-            return result
+            return self.cursor.fetchall()
 
 if __name__=='__main__':
-    db=hh_DB('sxs_vault','../data/config.ini')
+    db=hh_DB('sxs_vault','../config.ini')

@@ -39,3 +39,4 @@ class hh_Time():
 if __name__=='__main__':
     hh=hh_Time()
     print(hh.getTimestamp())
+    print(vars(hh_Time))
