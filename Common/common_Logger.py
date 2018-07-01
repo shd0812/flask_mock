@@ -28,7 +28,7 @@ class Log:
         if not os.path.exists(logPath):
             os.makedirs(logPath)
         self.checkNo = 0
-        logging.basicConfig(level=logging.DEBUG,
+        logging.basicConfig(level=logging.INFO,
                             format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
         self.logger = logging.getLogger()
 

@@ -31,7 +31,7 @@ def get_user(uid):
 def create_user(uid):
     user = request.get_json()
     select_data = select_user(int(uid))
-    #print(uid,select_data)
+    print(uid,select_data)
     result={}
     status_code=''
     if  select_data=='':

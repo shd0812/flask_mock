@@ -1,7 +1,7 @@
 from Common.common_OpDB import hh_DB
-from Common import logger
+from Common.common_Logger import myLog
 hh = hh_DB('mock_db','../data/config.ini')
-
+logger = myLog.getLog()
 def insert_user(u_id,s_name,mobile,province):
     insert_sql = "INSERT INTO `mock_db`.`mock_user` (`id`, `name`, `mobile`, `province`) VALUES ( '%s','%s','%s','%s' )" % (u_id,s_name,mobile,province)
     print(insert_sql)
@@ -10,8 +10,7 @@ def insert_user(u_id,s_name,mobile,province):
 #
 def select_user(uid):
     sele_sql = "SELECT * FROM mock_user WHERE id = %s" % uid
-    logger.setup_logger("DEBUG")
-    logger.log_debug('正在执行查询sql%s' % sele_sql)
+    logger.info('正在执行查询sql%s' % sele_sql)
     data = hh.get_data(sele_sql)
 
     return data

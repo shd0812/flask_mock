@@ -51,12 +51,14 @@ class operate_File():
             except Exception as e:
                 logger.error('读取出错了，{}'.format(e))
                 return  e
-
+    def write_file(self,text):
+        with open(self.get_path(),'w') as pf:
+            pf.write(text)
 
 
 if __name__=='__main__':
-    op =operate_File('../TestData/gm/valid.yaml')
-    d=op.read_file()
+    #op =operate_File('../TestData/gm/valid.yaml')
+    #d=op.read_file()
 
     check_data={
             'test_name':'用户信息查询',
@@ -73,29 +75,8 @@ if __name__=='__main__':
             }
 
 
-    print(check_data['parm']['body'][0]['index']['name'])
-    expect_list=d.get('expect')
-
-    for item in expect_list:
-        key,=item
-        temp_li=key.split('.')
-
-        for x in range(len(temp_li)):
-            if isinstance(check_data, str):
-                pass
-            else:
-                #print(temp_li[x],type(temp_li[x]))
-                if temp_li[x].isdigit():
-                    check_data = check_data[int(temp_li[x])]
-                else:
-                    check_data=check_data.get(temp_li[x])
-                print('check_data:{},x{}'.format(check_data, x))
-
-
-        check_str=check_data
-        expect_str = item.get(key)
-        print('要检查的字符{},期待的字符{}'.format(check_str,expect_str))
-
+    op = operate_File('../data/test_one/extract')
+    op.write_file(json.dumps(check_data))
 
 
 
