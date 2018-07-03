@@ -36,7 +36,11 @@ class hh_DB():
             return 'sql_error', e
         else:
             self.db.commit()
-            return self.cursor.fetchall()
+            print(type(self.cursor.fetchall()))
+            if self.cursor.fetchall():
+                return self.cursor.fetchall()
+            else:
+                return ''
 
 if __name__=='__main__':
     db=hh_DB('sxs_vault','../config.ini')

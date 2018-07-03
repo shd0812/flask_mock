@@ -14,8 +14,9 @@ class load_Case(object):
     def get_parm(self):
         parm_data = []
         file_data = self.get_caseData()
+        print(file_data)
         for item in file_data:
-            print(item)
+            #print(item)
             if isinstance(item,dict):
                 request_data=item.get('test').get('request')
                 parm_data.append(request_data)
@@ -25,8 +26,9 @@ class load_Case(object):
 
 
 if __name__ == '__main__':
-    case = load_Case('../data/test_one/test_one.yaml')
+    case = load_Case('../data/test_one/xeenho.yaml')
     parm_list = case.get_parm()
-    for item in parm_list:
-        resopnse = client(item.get('url'),data=item.get('data'))
-        print(resopnse)
+    print(parm_list)
+    # for item in parm_list:
+    #     resopnse = client(item.get('url'),data=item.get('data'))
+        #print(resopnse)

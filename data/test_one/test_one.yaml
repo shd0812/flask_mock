@@ -5,15 +5,14 @@
       data:
         account: '13521137793'
         password: '123456'
-      extract:
-        path: ../data/test_one/extract
-        content: user_id
+    extract:
+      user_id: user_id
 - test:
     name: login
     request:
       url: '127.0.0.1/api/login/'
       data:
-        user_id:
+        user_id: $user_id
 
 
 
