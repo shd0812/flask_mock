@@ -28,6 +28,7 @@ class TestcaseLoader(object):
         self.path = path
         self.file_mapping = self.__load_file__()
 
+
     def __load_file__(self):
         print('我被调用了')
 
@@ -47,9 +48,9 @@ class TestcaseLoader(object):
 
     def request_parm(self):
 
-
+        global_mapping = self.file_mapping
         request_mapping = []
-        for item in self.file_mapping:
+        for item in global_mapping:
             #print(item.get('test'))
             request_dic = item.get('request')
 
@@ -57,17 +58,15 @@ class TestcaseLoader(object):
                 raise exception.FileFormatError("API format error: {}".format(self.path))
             request_mapping.append(request_dic)
 
-        return  request_mapping
-
-    def extract_parm(self):
         extract_mapping = []
-        for item in self.file_mapping:
+        for item in global_mapping:
 
             extract_dic = item.get('extract')
             if isinstance(extract_dic,dict):
                 extract_mapping.append(extract_dic)
 
-        return  extract_mapping
+        return  request_mapping,extract_mapping
+
 
 
 

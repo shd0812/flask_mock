@@ -2,6 +2,9 @@ from  Common.common_OpFile import operate_File
 from  Common.common_Logger import myLog
 import re
 from  tmp_test.test1 import client
+from tmp_test import factory_func
+
+
 
 
 

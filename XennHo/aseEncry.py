@@ -31,10 +31,10 @@ class prpcrypt():
 
 	# 解密后，去掉补足的空格用strip() 去掉
 	def decrypt(self, text):
-		print(type(self.key))
+		# print(type(self.key))
 		cryptor = AES.new(self.key, self.mode, b'sxsadjgdAkg_llhs')
 		plain_text = cryptor.decrypt(a2b_hex(text))
-		print(plain_text.decode())
+		# print(plain_text.decode())
 		return plain_text.decode()
 class Sign():
 	def __init__(self):
@@ -61,7 +61,7 @@ class Sign():
 		key=self.key
 		data=serial_num+c_code+t_code+key
 
-		#print('sha前 %s' % data)
+		# print('sha前 %s' % data)
 
 		sign=self.get_hash(data)
 		#print('sha后 %s' % sign)

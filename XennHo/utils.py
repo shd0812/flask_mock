@@ -35,7 +35,7 @@ def get_Param(path):
     serial_num=s['serial_num']
     c_code=s['c_code']
     t_code=s['t_code']
-    #print('sign时间戳%s' % t_code)
+    # print('sign时间戳%s' % t_code)
     #print(serial_num,t_code,c_code)
     sign=ss.get_sign(serial_num,str(t_code),c_code)
     d['sign']=sign
@@ -53,7 +53,7 @@ def input_parm(parm_str):
         m_serial_num='dddddddfff'
         serial_num='serial_num='+m_serial_num+'&'
         parm_str = c_code+t_code+serial_num+parm_str
-       # print('输入参数为:%s' % parm_str)
+        # print('输入参数为:%s' % parm_str)
         list = parm_str.split('&')
     #print(list)
         pc = prpcrypt()
@@ -69,7 +69,7 @@ def input_parm(parm_str):
                 parm_dic[child_list[0]] = child_list[1]
         sign = ss.get_sign(m_serial_num,m_t_code,m_code)
         parm_dic['sign'] = sign
-        #print('加密后的参数:%s' % parm_dic)
+        # print('加密后的参数:%s' % parm_dic)
         return parm_dic
 
     else:

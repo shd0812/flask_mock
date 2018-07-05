@@ -1,14 +1,22 @@
+- config:
+    base_url: 'https://mi.shaxiaoseng.com:4433/Xeenho/'
+
 - test:
     name: 查询用户账户
     request:
+      method: 'POST'
+      headers:
+            {}
       url: 'query_useraccount'
       data:
         platform_uid: '3000000419294000'
-    extract:
-      platform_uid: content.records.0.platform_uid
 - test:
     name: 查询用户账户
     request:
+      method: 'POST'
+      headers:
+            {}
       url: 'query_userbidrepayinfo'
       data:
         platform_uid: '3000000419294000'
+
